@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face Detection</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        #previewImage {
+            margin-top: 20px;
+            max-width: 500px;
+        }
+        #label-container {
+            margin-top: 20px;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+
+
+  <div>Teachable Machine Image Model</div>
+  <input type="file" id="image-upload" accept="image/*" onchange="handleFileSelect(event)">
+  <img id="previewImage" alt="Preview Image">
+    <div id="label-container"></div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
